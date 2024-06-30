@@ -1,5 +1,5 @@
 # Đồ án IE207 - AENihongo
-
+![AENihongo](https://github.com/cngk-2002/AENihongo_JapaneseWebsite/assets/101913118/c7209fb1-832a-427a-abe7-683d9215ad22)
 ## Get Started
 
 To install Sakura Study on, follow these steps:
