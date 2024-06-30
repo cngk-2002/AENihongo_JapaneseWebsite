@@ -1,0 +1,30 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { socialLinks } from "../constants/constants";
+import Auth from "../utils/auth";
+
+const Footer = () => {
+  const loggedIn = Auth.loggedIn();
+
+  return (
+    <footer className={`${!loggedIn && "footer-bg-dark"} py-10`}>
+      <div className={`${!loggedIn && "max-w-7xl"} mx-auto px-4 lg:px-8`}>
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between border-t-2 border-gray-300/30 dark:border-gray-700 gap-8">
+          <p className="text-sm text-center sm:text-left flex items-center">
+            <b>ĐỒ ÁN MÔN HỌC - IE207.O21.CNCL</b>
+          </p>
+
+          <div className="flex flex-row flex-wrap justify-center gap-4 order-first sm:order-last">
+            {socialLinks.map((link) => (
+              <Link key={`link-${link.title}`} to={link.url}>
+                {link.icon}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

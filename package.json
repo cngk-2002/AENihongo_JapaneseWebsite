@@ -1,0 +1,21 @@
+{
+  "name": "japanese_basicweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "concurrently \"cd server && npm run start\" \"cd client && npm run dev\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "build": "cd client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cngk-2002/japanese_basicweb.git"
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
